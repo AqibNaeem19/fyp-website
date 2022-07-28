@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@600&display=swap');
+
+.landing{
+  background-color: transparent;
+  width: 100vw;
+  min-height: 95vh;
+}
+
+.landing-container{
+  margin: 0 auto;
+  width: 80%;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  padding: 3em 0em;
+}
+
+.landing-left-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border: 2px solid red;
+  position: relative;
+  animation: .5s animate-heading;
+}
+
+.landing-heading{
+  font-size: 5rem;
+  color: white;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  background: -webkit-linear-gradient(#F7F8F8, #ACBB78);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-para{
+  font-size: 2em;
+  font-family: 'Noto Naskh Arabic', serif;
+  color: white;
+  text-shadow: 1px 1px #b46a4d;
+}
+
+
+
+.landing-right-side{
+  width: 50%;
+  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: .5s animate-image;
+}
+
+/* Animation keyframes */
+@keyframes animate-image {
+  from { left: 200em}
+  to { left: 0px}
+}
+
+@keyframes animate-heading {
+  from { right: 200em}
+  to { right: 0px}
+}
+
+/* Media Queries */
+@media screen and (max-width: 970px){
+  .landing-heading{
+    font-size: 3.5rem;
+  }
+  .landing-para{
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 730px){
+  .landing-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  .landing-left-side{
+    width: 100%;
+  }
+  .landing-right-side{
+    width: 100%;
+  }
+  
+}
