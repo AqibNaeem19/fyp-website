@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@600&display=swap');
+
+.purpose{
+  width: 100vw;
+  margin-bottom: 3em;
+}
+
+.purpose-container{
+  margin: 0 auto;
+  width: 80%;
+  border: 2px solid white;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  padding: 3em 0em;
+}
+
+.purpose-heading{
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  background: -webkit-linear-gradient(#F7F8F8, #ACBB78);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.purpose-points-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.gradient-border p {
+  font-size: 1.8em;
+  font-family: 'Noto Naskh Arabic', serif;
+}
+
+.gradient-border {
+  width: 250px;
+  height: 200px;
+  --borderWidth: 5px;
+  background:  linear-gradient(0deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+  position: relative;
+  border-radius: var(--borderWidth);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  -webkit-animation: animatedgradient 3s ease alternate infinite;
+          animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@-webkit-keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media screen and (max-width: 1100px){
+  .gradient-border p{
+    font-size: 1.4em;
+  }
+
+  .gradient-border{
+    width: 200px;
+    height:150px;
+  }
+}
+
+@media screen and (max-width: 930px){
+  .purpose-container{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 745px){
+  .purpose-points-container{
+    flex-direction: column;
+
+  }
+
+  .gradient-border p{
+    font-size: 1.4em;
+  }
+
+  .gradient-border{
+    width: 300px;
+    height:250px;
+    margin-bottom: 2em;
+  }
+}
+
+
+
