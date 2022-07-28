@@ -10,10 +10,11 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
-  background: #ffffff;
+  background: linear-gradient(60deg, #f79533, #f79533, #ef4e7b, #fff, #fff);
   margin: 0 1.5px;
   height: 10px;
   width: 1px;
+  
 }
 
 .bar:nth-child(-n+7), .bar:nth-last-child(-n+7) {

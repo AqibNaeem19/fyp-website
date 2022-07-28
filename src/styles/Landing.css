@@ -4,13 +4,13 @@
 .landing{
   background-color: transparent;
   width: 100vw;
-  min-height: 95vh;
+  /* min-height: 20vh; */
 }
 
 .landing-container{
   margin: 0 auto;
   width: 80%;
-  border: 2px solid white;
+  
   display: flex;
   flex-direction: row;
   padding: 3em 0em;
@@ -22,9 +22,8 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  border: 2px solid red;
   position: relative;
-  animation: .5s animate-heading;
+  animation: 1s animate-heading;
 }
 
 .landing-heading{
@@ -48,11 +47,10 @@
 
 .landing-right-side{
   width: 50%;
-  border: 2px solid green;
   display: flex;
   justify-content: center;
   position: relative;
-  animation: .5s animate-image;
+  animation: 1s animate-image;
 }
 
 /* Animation keyframes */
