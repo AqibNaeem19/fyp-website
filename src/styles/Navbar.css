@@ -23,6 +23,11 @@
   border: 2px solid red;
 }
 
+.fa-sun-plant-wilt{
+  color: rgb(178, 240, 86);
+  font-size: 2em;
+}
+
 /* Media query  */
 @media screen and (max-width: 500px){
   .nav-container{
