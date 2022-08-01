@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Login from './login';
 import Logout from './logout';
 import '../styles/Navbar.css';
+import authContext from '../context/authContext';
 
 const Navbar = () => {
+  const a = useContext(authContext);
+  console.log('context name ', a.name );
+  console.log('context email ', a.email );
 
   return (
     <div className='nav'>
