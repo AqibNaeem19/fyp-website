@@ -1,10 +1,16 @@
+import React, { useContext } from 'react';
+import authContext from '../context/authContext';
 import { GoogleLogin } from 'react-google-login';
 import { CLIENT_ID } from '../Secrets';
 
-const Login = () => {
+const Login = ({setUserSigned}) => {
+  const { state, updateContextState} = useContext(authContext);
 
   const onSuccess = (res) => {
     console.log("Login Successfull as : ", res.profileObj);
+    const { name, email } = res.profileObj;
+    updateContextState(true, email, name);
+    setUserSigned(state.isSignedIn)
   }
 
   const onFailure = ( res) => {
@@ -15,10 +21,7 @@ const Login = () => {
 
     <GoogleLogin
       client_id={CLIENT_ID}
-      render={renderProps => (
-        <button onClick={renderProps.onClick} disabled={renderProps.disabled}>Sign IN</button>
-      )}
-      buttonText="Login"
+      buttonText="SIGN UP"
       onSuccess={onSuccess}
       onFailure={onFailure}
       cookiePolicy={'single_host_origin'}

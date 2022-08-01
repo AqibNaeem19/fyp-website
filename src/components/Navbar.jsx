@@ -1,21 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useState } from 'react'
 import Login from './login';
 import Logout from './logout';
 import '../styles/Navbar.css';
-import authContext from '../context/authContext';
 
 const Navbar = () => {
-  const a = useContext(authContext);
-  console.log('context name ', a.name );
-  console.log('context email ', a.email );
+  const [userSigned, setUserSigned] = useState();
 
   return (
     <div className='nav'>
       <div className="nav-container">
         <p> <i className="fa-solid fa-sun-plant-wilt"></i> </p>
         <div className="nav-buttons-container">
-          <Login />
-          <Logout />
+          {!userSigned && <Login setUserSigned={setUserSigned} />}
+          {userSigned && <Logout setUserSigned={setUserSigned} />}
         </div>
       </div>
     </div>

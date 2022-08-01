@@ -12,8 +12,8 @@ function App() {
         scope: ""
       })
     }
-
-    gapi.load('client:auth2', start);
+    
+    gapi.load('client:auth2', start);  
   })
 
 
