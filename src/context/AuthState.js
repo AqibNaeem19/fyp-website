@@ -14,6 +14,12 @@ const AuthState = (props) => {
     state.name = name;
   }
 
+  let userExists = localStorage.getItem("user");
+  if(userExists){
+    state = JSON.parse(userExists);
+  } 
+  
+
   return (
     <authContext.Provider value={{state, updateContextState}}>
       {props.children}

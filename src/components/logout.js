@@ -10,6 +10,7 @@ const Logout = ({setUserSigned}) => {
     console.log("Log out succesfully : ");
     updateContextState(false, '', '');
     setUserSigned( false);
+    localStorage.removeItem('user');
   }
 
 
